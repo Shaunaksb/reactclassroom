@@ -9,9 +9,11 @@ import Marks from './components/marks';
 import Form from './components/form';
 import Newcounter from './components/newCounter';
 import Clock from './components/clock';
-
+import Display from './display';
+import CounterContext from './countercontext';
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
     <>
       <div>
@@ -32,6 +34,9 @@ function App() {
       <Hello name="ssb"/>
       <Marks/>
       <Form/>
+      <CounterContext.Provider value={{count, setCount}}>
+      <Display/>
+      </CounterContext.Provider>
     </>
   )
 }
