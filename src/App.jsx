@@ -11,32 +11,36 @@ import Newcounter from './components/newCounter';
 import Clock from './components/clock';
 import Display from './display';
 import CounterContext from './countercontext';
+import DataFetcher from './components/dataFetcher';
+import ProgressBar from './components/progressBar';
 
 function App() {
   const [count, setCount] = useState(0);
   return (
     <>
       <div>
-        <Clock/>
-        <Welcome name="ssb"/>
-        <a href="https://vite.dev" target="_blank">
+        {/* <Clock/> */}
+        {/* <Welcome name="ssb"/> */}
+        {/* <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
+        </a> */}
+        {/* <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        </a> */}
       </div>
+      <Hello name="ssb"/>
       <Newcounter/>
       {/* <h1>Vite + React</h1>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
-      <Hello name="ssb"/>
-      <Marks/>
+      {/* <Marks/> */}
       <Form/>
-      <CounterContext.Provider value={{count, setCount}}>
-      <Display/>
-      </CounterContext.Provider>
+      {/* <CounterContext.Provider value={{count, setCount}}> */}
+      {/* <Display/> */}
+      {/* </CounterContext.Provider> */}
+      <DataFetcher/>
+      <ProgressBar/>
     </>
   )
 }
